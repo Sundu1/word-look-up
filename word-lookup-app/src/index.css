@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .notelist {
+    @apply m-5 h-[200px] w-[200px] bg-gray-50 border-2 rounded-lg shadow-xl hover:bg-gray-400 transition-all
+            p-5 font-serif;
+  }
+}
+
+.container {
+  position: absolute;
+  z-index: 400;
+  right: unset;
+  bottom: unset;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.newWordPopUpBox {
+  inset: auto auto 0px 0px;
+  transition-timing-function: ease;
+}
+
+.main {
+  height: 10em;
+  width: 10em;
+}
+
+.section1_slidein {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
